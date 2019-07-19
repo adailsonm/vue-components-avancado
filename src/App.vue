@@ -1,28 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container">
+    <h1>Vue JS</h1>
+    <Post titulo="Components no Vue">
+      <h2 slot="cabecalho">Components no Vue</h2>
+      <p class="post-paragrafo">Lorem ipsum dolor, sit amet consectetur
+      adipisicing elit. Quia, maiores ipsa pariatur dolorum, est 
+      temporibus eaque illum corrupti, nostrum similique veritatis
+      adipisci! Enim cum qui eum placeat dolor! Itaque, vero!</p>
+      <span>...</span>
+       <small slot="rodape">Por {{ autor }}</small>
+    </Post>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Post from './components/Post.vue'
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    Post
+  },
+  data() {
+    return {
+      autor: 'Adailson'
+    }
   }
 }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+  .container {
+    width: 960px;
+    margin: auto;
+  }
 </style>
