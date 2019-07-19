@@ -14,17 +14,17 @@
                 <small>{{ post.autor }}</small>
                 <a href="#" class="link">Ler mais...</a>
             </div>
-        </slot> 
+        </slot>
     </div>
 </template>
 <script>
 export default {
-    props: {
-        post: {
-            type: Object,
-            required: true
-        },
+  props: {
+    post: {
+      type: Object,
+      required: true
     }
+  }
 }
 </script>
 
